@@ -21,7 +21,35 @@ go install github.com/indaco/tempo/cmd/tempo@latest
 go install github.com/air-verse/air@latest
 ```
 
+## ⚡ Quickstart
+
+If you just want to see the final result in action:
+
+1. Make sure you have the [prerequisites](#prerequisites) installed:
+2. Clone the repository:
+
+    ```bash
+    git clone https://github.com/indaco/tempo-demo.git
+    cd tempo-demo
+    ```
+
+3. Run the dev server:
+
+    ```bash
+    make dev # or: task dev
+    ```
+
+4. Visit [http://localhost:7331](http://localhost:7331) in your browser.
+
+The `button` component with live reload and asset sync is already set up — no extra configuration needed.
+
+### 🔨 Want to Learn How It Was Built?
+
+The next section walks you through each step that was done to build this project from scratch using `tempo`, `templ`, and plain CSS/JS.
+
 ## 🧪 Getting Started
+
+This section explains the full step-by-step process that was followed to build this project from scratch.
 
 ### 1. Create a new Go module
 
