@@ -1,0 +1,17 @@
+package themes
+
+import "fmt"
+
+var buttonDarkHandle = templ.NewOnceHandle()
+
+templ buttonThemeDark() {
+	@buttonDarkHandle.Once() {
+		<style type="text/css">
+/* [tempo] BEGIN - Do not edit! This section is auto-generated. */
+@layer base{@media (prefers-color-scheme: dark){:root{--btn-default-color: oklch(.977 .017 320.058);--btn-default-color-hover: oklch(.952 .037 318.852);--btn-default-bg: oklch(.591 .293 322.896);--btn-default-bg-hover: oklch(.518 .253 323.949);--btn-default-border: transparent}}html.dark,html[data-theme=dark],body.dark{--btn-default-color: oklch(.977 .017 320.058);--btn-default-color-hover: oklch(.952 .037 318.852);--btn-default-bg: oklch(.591 .293 322.896);--btn-default-bg-hover: oklch(.518 .253 323.949);--btn-default-border: transparent}}
+
+/* [tempo] END */
+</style>
+	}
+	{ fmt.Sprintf("\n") }
+}

@@ -1,0 +1,21 @@
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --btn-default-color: oklch(0.977 0.017 320.058);
+      --btn-default-color-hover: oklch(0.952 0.037 318.852);
+      --btn-default-bg: oklch(0.591 0.293 322.896);
+      --btn-default-bg-hover: oklch(0.518 0.253 323.949);
+      --btn-default-border: transparent;
+    }
+  }
+
+  html.dark,
+  html[data-theme='dark'],
+  body.dark {
+    --btn-default-color: oklch(0.977 0.017 320.058);
+    --btn-default-color-hover: oklch(0.952 0.037 318.852);
+    --btn-default-bg: oklch(0.591 0.293 322.896);
+    --btn-default-bg-hover: oklch(0.518 0.253 323.949);
+    --btn-default-border: transparent;
+  }
+}

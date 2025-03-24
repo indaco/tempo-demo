@@ -1,0 +1,19 @@
+@layer base {
+  :root {
+    --btn-default-color: oklch(0.977 0.017 320.058);
+    --btn-default-color-hover: oklch(0.952 0.037 318.852);
+    --btn-default-bg: oklch(0.667 0.295 322.15);
+    --btn-default-bg-hover: oklch(0.591 0.293 322.896);
+    --btn-default-border: transparent;
+  }
+
+  html.light,
+  html[data-theme='light'],
+  body.light {
+    --btn-default-color: oklch(0.977 0.017 320.058);
+    --btn-default-color-hover: oklch(0.952 0.037 318.852);
+    --btn-default-bg: oklch(0.667 0.295 322.15);
+    --btn-default-bg-hover: oklch(0.591 0.293 322.896);
+    --btn-default-border: transparent;
+  }
+}

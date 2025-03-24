@@ -1,0 +1,11 @@
+{{- if isEmpty .CssLayer -}}
+:root {
+
+}
+{{- else }}
+@layer {{ .CssLayer }} {
+  :root {
+
+  }
+}
+{{- end -}}

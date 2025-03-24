@@ -1,0 +1,38 @@
+@layer components {
+  :is(button).btn {
+    --btn-color: var(--btn-default-color);
+    --btn-color-hover: var(--btn-default-color-hover);
+    --btn-bg: var(--btn-default-bg);
+    --btn-bg-hover: var(--btn-default-bg-hover);
+    --btn-border: var(--btn-default-border);
+
+    cursor: pointer;
+    user-select: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    /* box-sizing: content-box; */
+    min-inline-size: 2.5rem;
+    block-size: 2.5rem;
+    padding: 0 1.25em;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: var(--btn-color);
+
+    background-color: var(--btn-bg);
+    border-color: var(--btn-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.375rem;
+  }
+
+  :is(button).btn:hover {
+    color: var(--btn-color-hover);
+    background-color: var(--btn-bg-hover);
+  }
+}

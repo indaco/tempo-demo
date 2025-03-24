@@ -1,0 +1,10 @@
+package themes
+
+var buttonThemesHandle = templ.NewOnceHandle()
+
+templ ButtonThemes() {
+	@buttonThemesHandle.Once() {
+		@buttonThemeLight()
+		@buttonThemeDark()
+	}
+}

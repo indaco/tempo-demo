@@ -1,0 +1,12 @@
+[
+  {
+    "item": "file",
+    "templateFile": "component-variant/name.templ.gotxt",
+    "path": "{{ .GoPackage }}/{{ .ComponentName | goPackageName }}/css/variants/{{ .VariantName | goUnexportedName }}.templ"
+  },
+  {
+    "item": "file",
+    "templateFile": "component-variant/assets/css/name.css.gotxt",
+    "path": "{{ .AssetsDir }}/{{ .ComponentName | goPackageName }}/css/variants/{{ .VariantName | goUnexportedName }}.css"
+  }
+]

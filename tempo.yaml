@@ -1,0 +1,60 @@
+# Tempo CLI configuration file
+# Documentation & source code: https://github.com/indaco/tempo
+
+# The root folder for tempo files
+tempo_root: .tempo-files
+
+app:
+  # The name of the Go module being worked on.
+  go_module: github.com/indaco/tempo-demo
+
+  # The Go package name where components will be organized and generated.
+  go_package: components
+
+  # The directory where asset files (CSS, JS) will be generated.
+  assets_dir: assets
+
+  # Indicates whether JavaScript is required for the component.
+  # with_js: false
+
+  # The name of the CSS layer to associate with component styles.
+  css_layer: components
+
+# processor:
+# Number of concurrent workers (numCPUs * 2).
+# workers: 16
+
+# Summary format: compact, long, json, none.
+# summary_format: compact
+
+templates:
+  # A placeholder in template files indicating auto-generated sections.
+  # guard_marker: tempo
+
+  # File extensions used for template files.
+  # extensions:
+  # - .gotxt
+  # - .gotmpl
+  # - .tpl
+
+  # User-defined variables for template processing.
+  user_data:
+    author: John Doe
+    year: 2025
+    #
+    # Example nested values
+    # config:
+    #   option1: value1
+    #   option2: value2
+
+  # List of function providers for template processing.
+  # function_providers:
+  # Example provider using a local path.
+  # - name: default
+  #   type: path
+  #   value: ./providers/default
+  #
+  # Example provider from a Git repository.
+  # - name: custom
+  #   type: url
+  #   value: https://github.com/user/custom-provider.git

@@ -1,0 +1,34 @@
+package button
+
+import (
+	"github.com/indaco/tempo-demo/components/button/css"
+	"github.com/indaco/tempo-demo/components/button/js"
+)
+
+type ButtonProps struct {
+	Label   string
+	Variant string
+	Attrs   templ.Attributes
+}
+
+/**
+ * This comment block includes values from the user_data field under the templates section in the tempo.yaml file.
+ *
+ * Author: John Doe
+ * Year: 2025
+ */
+
+templ New(props *ButtonProps) {
+	@css.ButtonCSS(props.Variant)
+	<button
+		class="btn"
+		if props.Variant != "" {
+			data-variant={ props.Variant }
+		}
+		{ props.Attrs... }
+		onclick="handleClick(this)"
+	>
+		{ props.Label }
+	</button>
+	@js.ButtonJS()
+}

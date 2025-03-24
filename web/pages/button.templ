@@ -1,0 +1,20 @@
+package pages
+
+import (
+	"github.com/indaco/tempo-demo/components/button"
+	"github.com/indaco/tempo-demo/web/layouts"
+)
+
+templ ButtonPage() {
+	@layouts.Page("tempo - demo") {
+		<div class="inline">
+			@button.New(&button.ButtonProps{
+				Label: "Click Me!",
+			})
+			@button.New(&button.ButtonProps{
+				Label:   "Click Me!",
+				Variant: "outline",
+			})
+		</div>
+	}
+}

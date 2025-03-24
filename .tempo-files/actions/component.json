@@ -1,0 +1,39 @@
+[
+  {
+    "item": "file",
+    "templateFile": "component/templ/component.templ.gotxt",
+    "path": "{{ .GoPackage }}/{{ .ComponentName | goPackageName }}/{{ .ComponentName | goPackageName }}.templ"
+  },
+  {
+    "item": "file",
+    "templateFile": "component/assets/css/base.css.gotxt",
+    "path": "{{ .AssetsDir }}/{{ .ComponentName | goPackageName }}/css/base.css"
+  },
+  {
+    "item": "file",
+    "templateFile": "component/templ/css/base-css.templ.gotxt",
+    "path": "{{ .GoPackage }}/{{ .ComponentName | goPackageName }}/css/base.templ"
+  },
+  {
+    "item": "folder",
+    "source": "component/assets/css/themes",
+    "destination": "{{ .AssetsDir }}/{{ .ComponentName | goPackageName }}/css/themes"
+  },
+  {
+    "item": "folder",
+    "source": "component/templ/css/themes",
+    "destination": "{{ .GoPackage }}/{{ .ComponentName | goPackageName }}/css/themes"
+  },
+  {
+    "item": "file",
+    "templateFile": "component/assets/js/script.js.gotxt",
+    "path": "{{ .AssetsDir }}/{{ .ComponentName | goPackageName }}/js/script.js",
+    "onlyIfJs": true
+  },
+  {
+    "item": "file",
+    "templateFile": "component/templ/js/script.templ.gotxt",
+    "path": "{{ .GoPackage }}/{{ .ComponentName | goPackageName }}/js/script.templ",
+    "onlyIfJs": true
+  }
+]

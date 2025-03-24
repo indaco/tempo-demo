@@ -1,0 +1,27 @@
+package css
+
+import (
+	"fmt"
+	"github.com/indaco/tempo-demo/components/button/css/themes"
+	"github.com/indaco/tempo-demo/components/button/css/variants"
+)
+
+var buttonCSSHandle = templ.NewOnceHandle()
+
+templ ButtonCSS(variant string) {
+	@buttonCSSHandle.Once() {
+		<style type="text/css">
+/* [tempo] BEGIN - Do not edit! This section is auto-generated. */
+@layer components{:is(button).btn{--btn-color: var(--btn-default-color);--btn-color-hover: var(--btn-default-color-hover);--btn-bg: var(--btn-default-bg);--btn-bg-hover: var(--btn-default-bg-hover);--btn-border: var(--btn-default-border);cursor:pointer;user-select:none;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-inline-size:2.5rem;block-size:2.5rem;padding:0 1.25em;font-size:.95rem;font-weight:500;line-height:1.25rem;color:var(--btn-color);background-color:var(--btn-bg);border-color:var(--btn-border);border-style:solid;border-width:1px;border-radius:.375rem}:is(button).btn:hover{color:var(--btn-color-hover);background-color:var(--btn-bg-hover)}}
+
+/* [tempo] END */
+</style>
+	}
+	{ fmt.Sprintf("\n") }
+	@themes.ButtonThemes()
+	{ fmt.Sprintf("\n") }
+	if variant == "outline" {
+		@variants.VariantOutline()
+	}
+	{ fmt.Sprintf("\n") }
+}

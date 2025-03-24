@@ -1,0 +1,17 @@
+package {{ .ComponentName | goPackageName }}
+
+import (
+    "{{ .GoModule }}/{{ .GoPackage | normalizePath | goPackageName }}/{{ .ComponentName | goPackageName }}/css"
+)
+
+/**
+ * This comment block includes values from the user_data field under the templates section in the tempo.yaml file.
+ *
+ * Author: {{ .UserData.author }}
+ * Year: {{ .UserData.year }}
+ */
+templ {{ .ComponentName | goExportedName }}() {
+    @css.{{ .ComponentName | goExportedName }}CSS()
+
+    // continue here...
+}

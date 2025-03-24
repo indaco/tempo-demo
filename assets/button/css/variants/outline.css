@@ -1,0 +1,47 @@
+@layer components {
+  .btn[data-variant='outline'] {
+    --btn-color: var(--btn-outline-color);
+    --btn-color-hover: var(--btn-outline-color-hover);
+    --btn-bg: var(--btn-outline-bg);
+    --btn-bg-hover: var(--btn-outline-bg-hover);
+    --btn-border: var(--btn-outline-border);
+  }
+
+  :root {
+    --btn-outline-color: oklch(0.518 0.253 323.949);
+    --btn-outline-color-hover: oklch(0.452 0.211 324.591);
+    --btn-outline-bg: transparent;
+    --btn-outline-bg-hover: oklch(0.952 0.037 318.852);
+    --btn-outline-border: oklch(0.74 0.238 322.16);
+  }
+
+  html.light,
+  html[data-theme='light'],
+  body.light {
+    --btn-outline-color: oklch(0.518 0.253 323.949);
+    --btn-outline-color-hover: oklch(0.452 0.211 324.591);
+    --btn-outline-bg: transparent;
+    --btn-outline-bg-hover: oklch(0.952 0.037 318.852);
+    --btn-outline-border: oklch(0.74 0.238 322.16);
+  }
+
+  html.dark,
+  html[data-theme='dark'],
+  body.dark {
+    --btn-outline-color: oklch(0.833 0.145 321.434);
+    --btn-outline-color-hover: oklch(0.952 0.037 318.852);
+    --btn-outline-bg: transparent;
+    --btn-outline-bg-hover: oklch(0.667 0.295 322.15 / 0.5);
+    --btn-outline-border: oklch(0.667 0.295 322.15);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --btn-outline-color: oklch(0.833 0.145 321.434);
+      --btn-outline-color-hover: oklch(0.952 0.037 318.852);
+      --btn-outline-bg: transparent;
+      --btn-outline-bg-hover: oklch(0.667 0.295 322.15 / 0.5);
+      --btn-outline-border: oklch(0.667 0.295 322.15);
+    }
+  }
+}

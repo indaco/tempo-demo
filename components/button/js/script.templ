@@ -1,0 +1,14 @@
+package js
+
+var buttonJsHandle = templ.NewOnceHandle()
+
+templ ButtonJS() {
+	@buttonJsHandle.Once() {
+		<script type="text/javascript">
+/* [tempo] BEGIN - Do not edit! This section is auto-generated. */
+function getButtonVariant(button){return button.getAttribute("data-variant")||"default"}function handleClick(event){const variant=getButtonVariant(event);alert(`Variant: ${variant}`)}
+
+/* [tempo] END */
+</script>
+	}
+}

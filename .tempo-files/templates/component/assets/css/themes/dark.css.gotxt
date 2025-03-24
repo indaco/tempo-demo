@@ -1,0 +1,27 @@
+{{- if isEmpty .CssLayer -}}
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+
+html.dark,
+html[data-theme='dark'],
+body.dark {
+
+}
+{{- else -}}
+@layer {{ .CssLayer }} {
+  @media (prefers-color-scheme: dark) {
+    :root {
+
+    }
+  }
+
+  html.dark,
+  html[data-theme='dark'],
+  body.dark {
+
+  }
+}
+{{- end -}}

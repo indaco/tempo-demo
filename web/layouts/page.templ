@@ -1,0 +1,22 @@
+package layouts
+
+import "github.com/indaco/tempo-demo/web/styles"
+
+templ Page(title string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>{ title }</title>
+			<!-- styles -->
+			@styles.Base()
+		</head>
+		<body>
+			<main>
+				<h1 class="hero">{ title }</h1>
+				{ children... }
+			</main>
+		</body>
+	</html>
+}

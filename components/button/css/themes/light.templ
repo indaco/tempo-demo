@@ -1,0 +1,17 @@
+package themes
+
+import "fmt"
+
+var buttonLightHandle = templ.NewOnceHandle()
+
+templ buttonThemeLight() {
+	@buttonLightHandle.Once() {
+		<style type="text/css">
+/* [tempo] BEGIN - Do not edit! This section is auto-generated. */
+@layer base{:root{--btn-default-color: oklch(.977 .017 320.058);--btn-default-color-hover: oklch(.952 .037 318.852);--btn-default-bg: oklch(.667 .295 322.15);--btn-default-bg-hover: oklch(.591 .293 322.896);--btn-default-border: transparent}html.light,html[data-theme=light],body.light{--btn-default-color: oklch(.977 .017 320.058);--btn-default-color-hover: oklch(.952 .037 318.852);--btn-default-bg: oklch(.667 .295 322.15);--btn-default-bg-hover: oklch(.591 .293 322.896);--btn-default-border: transparent}}
+
+/* [tempo] END */
+</style>
+	}
+	{ fmt.Sprintf("\n") }
+}
