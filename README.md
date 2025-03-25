@@ -31,6 +31,8 @@ If you just want to see the final result in action:
     ```bash
     git clone https://github.com/indaco/tempo-demo.git
     cd tempo-demo
+
+    go mod download
     ```
 
 3. Run the dev server:
@@ -42,6 +44,8 @@ If you just want to see the final result in action:
 4. Visit [http://localhost:7331](http://localhost:7331) in your browser.
 
 The `button` component with live reload and asset sync is already set up — no extra configuration needed.
+
+Try editing any CSS or JS file in the `assets/` folder — `tempo` will sync the changes, and `templ`’s proxy will reload the browser for you.
 
 ### 🔨 Want to Learn How It Was Built?
 
